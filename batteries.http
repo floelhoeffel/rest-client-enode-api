@@ -1,0 +1,31 @@
+@id = 080e89e5-75b8-4734-932e-c592ebd5947e
+@actionId = 60120d8b-38fe-4ec5-ac6e-6335a6c3e8d3
+
+### List batteries
+GET {{$dotenv %baseUrl}}/batteries
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Get battery
+GET {{$dotenv %baseUrl}}/batteries/{{id}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Set operation mode
+POST {{$dotenv %baseUrl}}/batteries/{{id}}/operation-mode
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "operationMode": "TIME_OF_USE"
+}
+
+### Get operation mode action
+GET {{$dotenv %baseUrl}}/batteries/actions/{{actionId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Refresh hint
+POST {{$dotenv %baseUrl}}/batteries/{{id}}/refresh-hint
+Authorization: Bearer {{token}}
+Content-Type: application/json

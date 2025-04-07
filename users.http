@@ -1,0 +1,57 @@
+### Get users
+GET {{$dotenv %baseUrl}}/users
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Get user
+GET {{$dotenv %baseUrl}}/users/{{userId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Delete user / Unlink (delete and all data)
+DELETE {{$dotenv %baseUrl}}/users/{{userId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Create a link session
+POST {{$dotenv %baseUrl}}/users/{{userId}}/link
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "language": "browser",
+    "scopes": ["vehicle:read:data"],
+    "redirectUri": "https://example.com/redirect"
+}
+
+
+### Deauthorize user
+DELETE {{$dotenv %baseUrl}}/users/{{userId}}/authorization
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Create a multi-type-link session
+POST {{$dotenv %baseUrl}}/users/{{userId}}/link
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "language": "browser",
+    "vendor": "HUAWEI",
+    "scopes": ["battery:read:data", "battery:read:location", "battery:control:operation_mode", "meter:read:data", "meter:read:location", "inverter:read:data", "inverter:read:location"],
+    "redirectUri": "https://example.com/redirect"
+}
+
+### Unlink a vendor
+DELETE {{$dotenv %baseUrl}}/users/{{userId}}/vendors/TADO
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Get user statistics
+GET {{$dotenv %baseUrl}}/users/{{userId}}/statistics/charging
+?type=hvac
+&startDate=2024-10-01T00:00:00.000Z
+&endDate=2024-10-31T00:00:00.000Z
+&resolution=MONTH
+Authorization: Bearer {{token}}
+Content-Type: application/json

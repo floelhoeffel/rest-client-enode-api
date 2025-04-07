@@ -1,0 +1,36 @@
+@id = 076f19ed-5ea9-4b79-94de-ddaa3d8e3acb
+@year = 2025
+@month = 2
+@day = 26
+
+
+### List inverters
+GET {{$dotenv %baseUrl}}/inverters
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+
+### Get inverter
+GET {{$dotenv %baseUrl}}/inverters/{{id}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Get inverter statistics (DAY)
+GET {{$dotenv %baseUrl}}/inverters/{{id}}/statistics
+    ?year={{year}}
+    &month={{month}}
+    &day={{day}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Get inverter statistics (MONTH)
+GET {{$dotenv %baseUrl}}/inverters/{{id}}/statistics
+    ?year={{year}}
+    &month={{month}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Refresh hint
+POST {{$dotenv %baseUrl}}/batteries/{{id}}/refresh-hint
+Authorization: Bearer {{token}}
+Content-Type: application/json

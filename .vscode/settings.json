@@ -1,0 +1,20 @@
+{
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "userId": "defaultUserId",
+      "token": "your token"
+    },
+    "Frederik Enode Production Client": {
+      "clientId": "FREDERIK_CLIENT_PROD_ID",
+      "clientSecret": "FREDERIK_CLIENT_PROD_SECRET",
+      "baseUrl": "BASE_URL",
+      "authUrl": "AUTH_URL",
+    },
+    "Frederik Enode Sandbox Client": {
+      "clientId": "FREDERIK_CLIENT_SANDBOX_ID",
+      "clientSecret": "FREDERIK_CLIENT_SANDBOX_SECRET",
+      "baseUrl": "BASE_SANDBOX_URL",
+      "authUrl": "AUTH_SANDBOX_URL",
+    }
+  }
+}

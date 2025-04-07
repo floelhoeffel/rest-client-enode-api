@@ -1,0 +1,33 @@
+@Id = f313672e-a3a7-490f-b78f-9dea80976a7e
+@actionId = 49eeaed0-97c4-432c-809f-b75b70844391
+
+### List hvacs
+GET {{$dotenv %baseUrl}}/hvacs
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+
+### Get hvac
+GET {{$dotenv %baseUrl}}/hvacs/{{Id}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Set operation mode
+POST {{$dotenv %baseUrl}}/hvacs/{{Id}}/permanent-hold
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "mode": "HEAT",
+    "heatSetpoint": 23
+}
+
+### Follow schedule
+POST {{$dotenv %baseUrl}}/hvacs/{{Id}}/follow-schedule
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Get action
+GET {{$dotenv %baseUrl}}/hvacs/actions/{{actionId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json

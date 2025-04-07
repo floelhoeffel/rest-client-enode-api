@@ -1,0 +1,12 @@
+@actionId = 471d4612-ec07-43f8-9022-e4a9d56e9740
+
+
+### List vehicles
+GET {{$dotenv %baseUrl}}/vehicles
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### List actions
+GET {{$dotenv %baseUrl}}/vehicles/actions/{{actionId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json

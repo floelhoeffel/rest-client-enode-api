@@ -1,0 +1,16 @@
+### Get Locations
+GET {{$dotenv %baseUrl}}/locations
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Create a location
+POST {{$dotenv %baseUrl}}/users/{{userId}}/locations
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "name": "Neon UX",
+    "latitude": 50.107660,
+    "longitude": 10.7582268,
+    "timezoneName": "Europe/Berlin"
+}

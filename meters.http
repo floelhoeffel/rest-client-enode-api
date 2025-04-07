@@ -1,0 +1,16 @@
+@id = someId
+
+### List meters
+GET {{$dotenv %baseUrl}}/meters
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Get meter
+GET {{$dotenv %baseUrl}}/meter/{{id}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Refresh hint
+POST {{$dotenv %baseUrl}}/meter/{{id}}/refresh-hint
+Authorization: Bearer {{token}}
+Content-Type: application/json

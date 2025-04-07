@@ -1,0 +1,21 @@
+@id = 471d4612-ec07-43f8-9022-e4a9d56e9740
+### Create webhook
+POST {{$dotenv %baseUrl}}/webhooks
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "url": "https://someId.ngrok-free.app",
+    "events": ["user:inverter:discovered", "user:battery:discovered", "user:meter:discovered"], 
+    "secret": "someSecret"
+}
+
+### List webhooks
+GET  {{$dotenv %baseUrl}}/webhooks
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Delete wrbhook
+DELETE  {{$dotenv %baseUrl}}/webhooks/{{id}}
+Authorization: Bearer {{token}}
+Content-Type: application/json

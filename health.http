@@ -1,0 +1,19 @@
+### Health for chargers
+GET {{$dotenv %baseUrl}}/health/chargers
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Health for hvacs
+GET {{$dotenv %baseUrl}}/health/hvacs
+Authorization: Bearer {{token}}
+Content-Type: application/json
+ 
+### Health for meters
+GET {{$dotenv %baseUrl}}/health/meters
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### Health for vehicles
+GET {{$dotenv %baseUrl}}/health/vehicles
+Authorization: Bearer {{token}}
+Content-Type: application/json

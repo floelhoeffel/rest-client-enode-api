@@ -1,0 +1,7 @@
+### Get a token in exchange for clientId and clientSecret. Copy the `token` from the response and paste it in .vscode/settings.json
+POST {{$dotenv %authUrl}} HTTP/1.1
+Authorization: Basic {{$dotenv %clientId}} {{$dotenv %clientSecret}}
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials
+

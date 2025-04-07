@@ -1,0 +1,5 @@
+### Get interventions
+GET {{$dotenv %baseUrl}}/interventions
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
