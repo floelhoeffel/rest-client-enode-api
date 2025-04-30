@@ -1,4 +1,6 @@
-### Get users
+@userId = frederik
+
+### Get systems
 GET {{$dotenv %baseUrl}}/users
 Authorization: Bearer {{token}}
 Content-Type: application/json

@@ -1,0 +1,19 @@
+@userId = frederik
+@systemId = 1ea989b7-6bcf-4b03-a095-19dc1ac795fb
+
+### List user systems
+GET {{$dotenv %baseUrl}}/users/{{userId}}/sites
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+
+### Get a system
+GET {{$dotenv %baseUrl}}/sites/{{systemId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+
+### Get a system's status
+GET {{$dotenv %baseUrl}}/sites/{{systemId}}/status
+Authorization: Bearer {{token}}
+Content-Type: application/json
