@@ -1,5 +1,5 @@
-@id = 080e89e5-75b8-4734-932e-c592ebd5947e
-@actionId = 60120d8b-38fe-4ec5-ac6e-6335a6c3e8d3
+@id = 91faaf14-771d-4633-af3d-a2c34792cd6d
+@actionId =e748b738-ffea-4c1a-9597-7dc00db901ca
 
 ### List batteries
 GET {{$dotenv %baseUrl}}/batteries
@@ -17,7 +17,7 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-    "operationMode": "TIME_OF_USE"
+    "operationMode": "SELF_RELIANCE"
 }
 
 ### Get operation mode action

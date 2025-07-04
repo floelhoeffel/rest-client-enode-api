@@ -39,7 +39,7 @@ Content-Type: application/json
 
 {
     "language": "browser",
-    "vendor": "HUAWEI",
+
     "scopes": ["battery:read:data", "battery:read:location", "battery:control:operation_mode", "meter:read:data", "meter:read:location", "inverter:read:data", "inverter:read:location"],
     "redirectUri": "https://example.com/redirect"
 }

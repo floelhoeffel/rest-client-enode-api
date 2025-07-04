@@ -1,7 +1,7 @@
-@id = 076f19ed-5ea9-4b79-94de-ddaa3d8e3acb
+@id = 88e21125-b29c-417b-8646-3ccb662bd84e
 @year = 2025
-@month = 2
-@day = 26
+@month = 5
+@day = 15
 
 
 ### List inverters
@@ -11,7 +11,7 @@ Content-Type: application/json
 
 
 ### Get inverter
-GET {{$dotenv %baseUrl}}/inverters/{{id}}
+GET {{$dotenv %baseUrl}}/inverters/{{§id}}
 Authorization: Bearer {{token}}
 Content-Type: application/json
 

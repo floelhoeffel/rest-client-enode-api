@@ -1,5 +1,5 @@
 ### Get integrations
-GET {{$dotenv %baseUrl}}/integrations?assetTypes=battery,meter
+GET {{$dotenv %baseUrl}}/integrations?assetTypes=battery
 Authorization: Bearer {{token}}
 Content-Type: application/json
 

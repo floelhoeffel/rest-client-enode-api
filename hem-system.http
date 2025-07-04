@@ -1,0 +1,28 @@
+@userId = frederik
+@systemId = 1accdf3a-0083-4815-b0c5-19881ffdd4d8
+
+### List user systems
+GET {{$dotenv %baseUrl}}/users/{{userId}}/hem-systems
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+
+### Get a system
+GET {{$dotenv %baseUrl}}/hem-systems/{{systemId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+
+### Get a system's status
+GET {{$dotenv %baseUrl}}/hem-systems/{{systemId}}/status
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+
+### Get a system's statistics
+GET {{$dotenv %baseUrl}}/hem-systems/{{systemId}}/stats
+?interval=2025-07-04
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+
